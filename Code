@@ -1,0 +1,106 @@
+# lear
+# Subplot
+
+# Unlike other type of data with subplots you can create more than one grafic
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+choice = int(input("\nEnter : "))
+
+
+if choice == 1:
+    # Subplot 1
+    # Plot 1
+    array_1 = np.array([0, 1, 2, 3])
+    array_2 = np.array([3, 8, 1, 10])
+    plt.subplot(1, 2, 1)
+    plt.plot(array_1, array_2)
+
+    # Plot 2
+    array_3 = np.array([0, 1, 2, 3])
+    array_4 = np.array([10, 20, 30, 40])
+    plt.subplot(1, 2, 2)
+    plt.plot(array_3, array_4)
+
+
+elif choice == 2:
+    # Subplot 2
+    # We also can create horizontal subplots
+    # Plot 1
+    array_5 = np.array([0, 1, 2, 3])
+    array_6 = np.array([3, 8, 1, 10])
+    plt.subplot(2, 1, 1)
+    plt.plot(array_5, array_6)
+
+    # Plot 2
+    array_7 = np.array([0, 1, 2, 3])
+    array_8 = np.array([10, 20, 30, 40])
+    plt.subplot(2, 1, 2)
+    plt.plot(array_7, array_8)
+
+
+elif choice == 3:
+    # Subplot 3
+    # We also can create a lot of subplots
+    # Plot 1
+    array_1 = np.array([0, 1, 2, 3])
+    array_2 = np.array([10, 20, 30, 40])
+    plt.subplot(2, 3, 1)
+    plt.plot(array_1, array_2)
+
+    # Plot 2
+    array_3 = np.array([0, 1, 2, 3])
+    array_4 = np.array([1, 7, 3, 10])
+    plt.subplot(2, 3, 2)
+    plt.plot(array_3, array_4)
+
+    # Plot 3
+    array_5 = np.array([0, 1, 2, 3])
+    array_6 = np.array([20, 50, 10, 60])
+    plt.subplot(2, 3, 3)
+    plt.plot(array_5, array_6)
+
+    # Plot 4
+    array_7 = np.array([0, 1, 2, 3])
+    array_8 = np.array([2, 4, 6, 8])
+    plt.subplot(2, 3, 4)
+    plt.plot(array_7, array_8)
+
+    # Plot 5
+    array_9 = np.array([0, 1, 2, 3])
+    array_10 = np.array([23, 12, 18, 27])
+    plt.subplot(2, 3, 5)
+    plt.plot(array_9, array_10)
+
+    # Plot 6
+    array_11 = np.array([0, 1, 2, 3])
+    array_12 = np.array([75, 45, 123, 98])
+    plt.subplot(2, 3, 6)
+    plt.plot(array_11, array_12)
+
+
+elif choice == 4:
+    # Subplot 4
+    # You can also add titles to x, y and central axis
+    # Plot 1
+    array_1 = np.array([0, 1, 2, 3])
+    array_2 = np.array([3, 1, 6, 10])
+    plt.subplot(1, 2, 1)
+    plt.plot(array_1, array_2)
+    plt.xlabel("Months")
+    plt.ylabel("Price")
+    plt.title("Sales")
+
+    # Plot 2
+    array_3 = np.array([0, 1, 2, 3])
+    array_4 = np.array([4, 3, 9, 12])
+    plt.subplot(1, 2, 2)
+    plt.plot(array_3, array_4)
+    plt.xlabel("Months")
+    plt.ylabel("Price")
+    plt.title("Income")
+
+plt.suptitle("Market")
+plt.show()
